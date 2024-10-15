@@ -1,198 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-    <style>
-        :root {
-            --primary: #fff;
-            --bg-color: rgb(5, 53, 61);
-            --bg-envelope-color: #f5edd1;
-            --envelope-tab: #ecdeb8;
-            --envelope-cover: #e6cfa7;
-            --shadow-color: rgba(0, 0, 0, 0.2);
-            --txt-color: #444;
-            --heart-color: red;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background: var(--bg-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            scrollbar-color: transparent;
-            overflow: hidden; /* Add this line to prevent scrolling */
-        }
-        .container {
-            height: 140vh;
-            display: grid;
-            place-items: center;
-        }
-        .container > .envelope-wrapper {
-            background: var(--bg-envelope-color);
-            box-shadow: 0 0 80px var(--shadow-color);
-        }
-        .envelope-wrapper > .envelope {
-            position: relative;
-            width: 600px;
-            height: 460px;
-        }
-        .envelope-wrapper > .envelope::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            z-index: 2;
-            border-top: 260px solid var(--envelope-tab);
-            border-right: 300px solid transparent;
-            border-left: 300px solid transparent;
-            transform-origin: top;
-            transition: all 0.5s ease-in-out 0.7s;
-        }
-        .envelope-wrapper > .envelope::after {
-            content: "";
-            position: absolute;
-            z-index: 2;
-            width: 0px;
-            height: 0px;
-            border-top: 260px solid transparent;
-            border-right: 300px solid var(--envelope-cover);
-            border-bottom: 200px solid var(--envelope-cover);
-            border-left: 300px solid var(--envelope-cover);
-        }
-        .envelope > .letter {
-            position: absolute;
-            right: 18%;
-            bottom: 0%;
-            width: 60%;
-            height: 90%;
-            background: var(--primary);
-            text-align: center;
-            transition: all 1s ease-in-out;
-            box-shadow: 0 0 5px var(--shadow-color);
-            padding: 20px 10px;
-        }
-        .envelope > .letter > .text {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color: var(--txt-color);
-            text-align: left;
-            font-size: 10px;
-        }
-        .open-text { /* New styles for "Open Me" */
-            position: absolute;
-            bottom: 70px; /* Adjust as needed for spacing */
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 44px; /* Adjust font size as needed */
-            color: var(--txt-color); /* Match the text color */
-            text-align: center;
-            color: var(--bg-color);
-            z-index: 3; /* Ensure it's above the envelope but below the heart */
-        }
-        .heart {
-            position: absolute;
-            top: 70%;
-            left: 50%;
-            width: 45px;
-            height: 45px;
-            background: var(--heart-color);
-            z-index: 4;
-            transform: translate(-50%, -20%) rotate(45deg);
-            transition: transform 0.5s ease-in-out 1s;
-            box-shadow: 0 1px 6px var(--shadow-color);
-            cursor: pointer;
-        }
-        .heart:before,
-        .heart:after {
-            content: "";
-            position: absolute;
-            width: 45px;
-            height: 45px;
-            background-color: var(--heart-color);
-            border-radius: 50%;
-        }
-        .heart:before {
-            top: -22.5px;
-        }
-        .heart:after {
-            right: 22.5px;
-        }
-        .flap > .envelope:before {
-            transform: rotateX(180deg);
-            z-index: 0;
-        }
-        .flap > .envelope > .letter {
-            bottom: 220px;
-            transform: scale(1.5);
-            transition-delay: 1s;
-        }
-        .flap > .heart {
-            transform: rotate(90deg);
-            transition-delay: 0.4s;
-        }
-        .left-image {
-            float: left; /* Makes the image float to the left */
-            margin-right: 10px; /* Space between the image and the text */
-            width: 100px; /* Adjust the size of the image as needed */
-            height: auto; /* Maintain the aspect ratio */
-        }
-    </style>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1 MONTH LOVE</title>
+    <title>Question 1</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <div class="envelope-wrapper">
-            <div class="envelope">
-                <div class="letter">
-                    <div class="text">
-                        <strong>Hey My Sweet Love or i'd rather say Better Half,</strong>
-                        <p>
-                            <img src="love.jpeg" alt="Description" class="left-image">
-                            In the quiet breath between our words, I found a world I never knew I needed. Your laughter and smile, like soft rain on thirsty ground, Falls on my heart and fills it with love. <br><br>
-Time, it seems, is a trickster, How can one month feel like forever, Yet not nearly long enough? A moment with you is both endless and fleeting. <br><br>
-Moments seem indefinite but yet not enough, Never thought of someone touching my heart like you did, Leaving a hickey on heart, the key which you took with you. Every thought of you makes me smile and give me butterflies.
+<body class="question1-bg">
 
-In every glance, I see the depth of us and a far future, Like an ocean just beginning to stir. And I wonder, how did I live before knowing your touch, your voice, your smile, your soul ? <br><br>
-You are the song I didn’t know I was missing, A melody that lingers even in the silence which makes my day. If this first month is a spark, Then I’m ready to burn in this fire of forever along your side. <br><br>
-<div style="text-align: center;">
-    Happy One Month Sinthu, I LOVE YOU SO MUCH ♥️♥️♥️
-</div>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="heart"></div>
-            <div class="open-text">சிந்தூரி</div> <!-- Moved outside the envelope -->
+    <div class="container">
+        <h1>Hey Love, Let us start easy, What is my favourite color?</h1>
+        
+        <div id="message"></div> <!-- Feedback area -->
+
+        <div class="options">
+            <button onclick="checkAnswer('wrong', 'question1')">Brown</button>
+            <button onclick="checkAnswer('wrong', 'question1')">Blue</button>
+            <button onclick="checkAnswer('correct', 'q2.html')">Yellow</button>
         </div>
     </div>
 
-    <!-- Audio element -->
-    <audio id="background-music" src="lovesong.mp3" preload="auto"></audio>
-
-    <script>
-        const envelope = document.querySelector('.envelope-wrapper');
-        const music = document.getElementById('background-music');
-
-        envelope.addEventListener('click', () => {
-            // Toggle flap class
-            envelope.classList.toggle('flap');
-
-            // If the envelope is opened (flap class is added), play the music
-            if (envelope.classList.contains('flap')) {
-                music.play(); // Start the music when the envelope is opened
-            } else {
-                music.pause(); // Stop the music when the envelope is closed
-                music.currentTime = 0; // Reset the music to the beginning
-            }
-        });
-
-        const heart = document.querySelector('.heart');
-        heart.addEventListener('click', () => {
-            // Play music when heart is clicked
-            music.play();
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

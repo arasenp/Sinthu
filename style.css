@@ -1,0 +1,163 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    color: antiquewhite;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-size: 30px;
+}
+
+.container {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: antiquewhite;
+}
+
+button:hover{
+    font-size: 22px;
+
+}
+
+.success {
+    color: rgb(0, 212, 0);
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.error {
+    color: red;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+/* Backgrounds for each question */
+.question1-bg {
+    background: url("b1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.question2-bg {
+    background: url("b2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.question3-bg {
+    background: url("b3.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.question4-bg {
+    background: url("b4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.question5-bg {
+    background: url("b5.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.question6-bg {
+    background: url("b6.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.question7-bg {
+    background: url("b7.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.question8-bg {
+    background: url("b8.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.intro {
+    background: url("intro.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.introgallery {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    overflow: hidden;
+  }
+  .scope {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    transform-style: preserve-3d;
+    animation: slid 30s linear infinite;
+  }
+  
+  .scope span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 90deg)) translateZ(350px);
+  }
+  .scope span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 2s;
+  }
+  .scope span:hover img {
+    transform: translateY(-50px) scale(1.5);
+  }
+  @keyframes slid {
+    0% {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+      transform: perspective(1000px) rotateY(360deg);
+    }
+  }
+  

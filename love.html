@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 MONTH LOVE</title>
+    <link rel="stylesheet" href="lovestyle.css">
+</head>
+<div class="rainheart">
+</div>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Hey My Sweet Love or i'd rather say Better Half,</strong>
+                        <p>
+                            <img src="love.jpeg" alt="Description" class="left-image">
+                            In the quiet breath between our words, I found a world I never knew I needed. Your laughter and smile, like soft rain on thirsty ground, Falls on my heart and fills it with love. <br><br>
+Time, it seems, is a trickster, How can one month feel like forever, Yet not nearly long enough? A moment with you is both endless and fleeting. <br><br>
+Moments seem indefinite but yet not enough, Never thought of someone touching my heart like you did, Leaving a hickey on heart, the key which you took with you. Every thought of you makes me smile and give me butterflies.
+
+In every glance, I see the depth of us and a far future, Like an ocean just beginning to stir. And I wonder, how did I live before knowing your touch, your voice, your smile, your soul ? <br><br>
+You are the song I didn’t know I was missing, A melody that lingers even in the silence which makes my day. If this first month is a spark, Then I’m ready to burn in this fire of forever along your side. <br><br>
+<div style="text-align: center;">
+    Happy One Month Sinthu, I LOVE YOU SO MUCH ♥️♥️♥️
+</div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+            <div class="open-text">சிந்தூரி</div> <!-- Moved outside the envelope -->
+        </div>
+    </div>
+
+    <!-- Audio element -->
+    <audio id="background-music" src="lovesong.mp3" preload="auto"></audio>
+
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        const music = document.getElementById('background-music');
+        const heartElement = document.querySelector('.heart');
+    
+        envelope.addEventListener('click', () => {
+            // Toggle flap class
+            envelope.classList.toggle('flap');
+    
+            // If the envelope is opened (flap class is added), play the music
+            if (envelope.classList.contains('flap')) {
+                music.play(); // Start the music when the envelope is opened
+            } else {
+                music.pause(); // Stop the music when the envelope is closed
+                music.currentTime = 0; // Reset the music to the beginning
+            }
+        });
+    
+        heartElement.addEventListener('click', () => {
+            // Play music when heart is clicked
+            music.play();
+            createHeart(); // Call the renamed function to create a heart
+        });
+    
+        function createHeart() {
+
+            const container = document.querySelector('.rainheart');
+
+            const heartDiv = document.createElement('div');
+            heartDiv.classList.add('hearts');
+            heartDiv.innerHTML = '🍁 ♥️ ';
+            heartDiv.style.left = Math.random() * 100 + 'vw';
+            heartDiv.style.animationDuration = Math.random()* 3 + 2 + 's';
+            container.appendChild(heartDiv);
+            document.body.appendChild(heartDiv); // Append heart to the body or desired container
+            console.log(heartDiv);
+        }
+        createHeart();
+
+        setInterval(createHeart, 1000);
+    </script>    
+</body>
+</html>

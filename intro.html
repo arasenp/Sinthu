@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="intro">
+
+    <div id="message"></div> <!-- Feedback area -->
+
+    <div class="introgallery">
+        <div class="scope">
+            <span style="--i:1;"><img src="p1.jpg" alt="not found"></span>
+            <span style="--i:2;"><img src="p2.jpg" alt="not found"></span>
+            <span style="--i:3;"><img src="p3.jpg" alt="not found"></span>
+            <span style="--i:4;"><img src="p4.jpg" alt="not found"></span>
+          </div>
+    </div>
+
+    <h2> I kind of lied slightly to you, a little white lie there was never a wrong answer, all of them were correct,<br>
+    these marked the best memories which I had with you on the island that made me extremely <br>
+    attached to you and fall for you even more to the point that I think of you everyday. <br>
+    The above are my favourite pictures so far with you and soon, we'll have more. </h1>
+
+            <button onclick="checkAnswer('correct', 'love.html')">For you my love ♥️</button>
+
+    <script>
+        function checkAnswer(answer, nextPage) {
+    const message = document.getElementById("message");
+
+    if (answer === "correct") {
+        setTimeout(() => {
+            window.location.href = nextPage;
+        }, 2000); // After 2 seconds, move to the next page
+}
+        }
+    </script>
+</body>
+</html>
